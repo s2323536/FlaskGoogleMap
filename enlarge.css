@@ -1,0 +1,3 @@
+.pic{width:500px; height:350px;overflow:hidden;}
+.pic img{transform:scale(1,1);transition: all 1s ease-out;}
+.pic img:hover{transform:scale(1.2,1.2);}

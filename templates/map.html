@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google-Map</title>
+</head>
+
+<body>
+    <h2>Smith's Google-Map Searching Engine:</h2>
+    <h2>請輸入地點,商品,半徑</h2>
+    <form name="myform" action="/map">     
+        <p><h2>地點:<input required type="text" name="cities" /></h2></p>
+        <p><h2>商品:<input required type="text" name="keyword" /></h2></p>
+        <p><h2>半徑:<input required type="number" name="radius" />以公尺為單位</h2></p>
+        <p><input type="submit" value="搜尋" /></p>
+    </form>
+
+{% if myResult != undefined %}
+    <h2>-------------------------------搜尋結果:---------------------------------</h2>
+    <h2>{{myResult}}</h2>
+{% endif %}
+
+{% block content %}
+    <table border="2">
+        {% for value1 in Resultlist %}
+            <tr><h6>{{value1}}</h6></tr>     
+        {% endfor %}
+    </table>
+{% endblock %}
+</body>
+</html>
