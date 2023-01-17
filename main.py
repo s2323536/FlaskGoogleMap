@@ -18,7 +18,7 @@ app = Flask(
     static_url_path='/'
 )
 app.secret_key="any string but secret"
-gmaps = googlemaps.Client(key='AIzaSyD4GBDBdgM0njFEprlHEObgYx0nFJ2812w')
+gmaps = googlemaps.Client(key='AIzaSyBFoVj6u61S3uf4uuvBIs0_9mq3wnUr8B8')
 
 @app.route('/')
 def home():
